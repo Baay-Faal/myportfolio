@@ -1340,3 +1340,377 @@ img, svg {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   SERVICES & BUDGET ESTIMATOR SECTION
+   ========================================================================== */
+.services-section {
+    padding: 120px 0;
+    background-color: var(--color-white);
+}
+
+.estimator-container {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    background-color: var(--color-gray-light);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow-3d-lg);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Step Indicators */
+.estimator-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.estimator-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+.step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 80px;
+}
+
+.step-indicator .step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-gray-medium);
+    transition: var(--transition-smooth);
+}
+
+.step-indicator.active .step-num {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-white);
+    box-shadow: var(--shadow-3d-sm);
+}
+
+.step-indicator.completed .step-num {
+    background-color: var(--color-azur);
+    border-color: var(--color-azur);
+    color: var(--color-white);
+}
+
+.step-indicator .step-label {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-gray-medium);
+}
+
+.step-indicator.active .step-label {
+    color: var(--color-dark);
+}
+
+/* Step contents */
+.step-content {
+    display: none;
+    min-height: 280px;
+}
+
+.step-content.active {
+    display: block;
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.step-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-dark);
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* Options Grid layout */
+.options-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2x2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.option-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.option-card input[type="radio"],
+.option-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.option-card-inner {
+    background-color: var(--color-white);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: var(--shadow-3d-sm);
+    transition: var(--transition-smooth);
+}
+
+.option-card:hover .option-card-inner {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-3d-md);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.option-card input:checked + .option-card-inner {
+    border-color: var(--color-azur);
+    box-shadow: 0 10px 20px rgba(0, 114, 255, 0.1);
+}
+
+.option-card .option-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-dark);
+}
+
+.option-card .option-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-azur);
+}
+
+/* Result box */
+.result-box {
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-3d-sm);
+}
+
+.result-heading {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-gray-medium);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.result-price-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.result-value {
+    font-size: 54px;
+    font-weight: 900;
+    color: var(--color-dark);
+    letter-spacing: -2px;
+}
+
+.result-currency {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-azur);
+}
+
+.result-disclaimer {
+    font-size: 13px;
+    color: var(--color-gray-medium);
+    margin-bottom: 30px;
+}
+
+.estimator-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid-2x2, .grid-3col {
+        grid-template-columns: 1fr;
+    }
+    
+    .estimator-steps::before {
+        display: none;
+    }
+    
+    .estimator-steps {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .step-indicator {
+        width: calc(50% - 10px);
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .step-indicator .step-label {
+        margin-top: 0;
+    }
+}
+
+/* --- Services Details Section --- */
+.services-details-section {
+    padding: 100px 0;
+    background-color: var(--color-gray-light);
+}
+
+.services-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-detail-card {
+    background-color: var(--color-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-3d-sm);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    transition: var(--transition-smooth);
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-3d-md);
+    border-color: var(--color-azur-light);
+}
+
+.service-detail-card h4 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.service-detail-card p {
+    font-size: 14px;
+    color: var(--color-gray-medium);
+    line-height: 1.6;
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+    padding: 120px 0;
+    background-color: var(--color-white);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: var(--color-gray-light);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.faq-item.active {
+    background-color: var(--color-white);
+    border-color: var(--color-azur-light);
+    box-shadow: var(--shadow-3d-md);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 24px 30px;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-gray-medium);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    content: '-';
+    transform: rotate(180deg);
+    color: var(--color-azur);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 30px;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px; /* Valeur importante pour permettre le déploiement complet */
+    padding: 0 30px 30px 30px;
+    transition: max-height 0.5s ease-in, padding 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: var(--color-gray-medium);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .services-details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

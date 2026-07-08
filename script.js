@@ -174,4 +174,192 @@ Message : ${message}`;
             window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
         });
     }
+
+    // ==========================================
+    // 5. BUDGET ESTIMATOR INTERACTIVE WIZARD
+    // ==========================================
+    let currentStep = 1;
+    const totalSteps = 4;
+    
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const stepIndicators = document.querySelectorAll('.step-indicator');
+    const stepContents = document.querySelectorAll('.step-content');
+    const totalValEl = document.getElementById('estimated-total');
+    
+    // Inputs
+    const projectTypeInputs = document.getElementsByName('project-type');
+    const optionCheckboxes = document.querySelectorAll('.check-card input[type="checkbox"]');
+    const projectDelayInputs = document.getElementsByName('project-delay');
+    
+    const calculateBudget = () => {
+        if (!totalValEl) return 0;
+
+        // 1. Base Price
+        let basePrice = 0;
+        for (const input of projectTypeInputs) {
+            if (input.checked) {
+                basePrice = parseInt(input.value, 10);
+                break;
+            }
+        }
+        
+        // 2. Options
+        let optionsPrice = 0;
+        optionCheckboxes.forEach(cb => {
+            if (cb.checked) {
+                optionsPrice += parseInt(cb.dataset.price || 0, 10);
+            }
+        });
+        
+        // 3. Delay Multiplier
+        let multiplier = 1.0;
+        for (const input of projectDelayInputs) {
+            if (input.checked) {
+                multiplier = parseFloat(input.value);
+                break;
+            }
+        }
+        
+        // Total
+        const total = Math.round((basePrice + optionsPrice) * multiplier);
+        
+        // Format with spaces
+        totalValEl.textContent = total.toLocaleString('fr-FR');
+        
+        // Update Launch Project Button Link with parameters
+        const launchProjectBtn = document.getElementById('launch-project-btn');
+        if (launchProjectBtn) {
+            let typeName = "Projet";
+            for (const input of projectTypeInputs) {
+                if (input.checked) {
+                    typeName = input.closest('.option-card').querySelector('.option-name').textContent;
+                    break;
+                }
+            }
+            
+            let selectedOptions = [];
+            optionCheckboxes.forEach(cb => {
+                if (cb.checked) {
+                    selectedOptions.push(cb.closest('.option-card').querySelector('.option-name').textContent.trim());
+                }
+            });
+            const optionsStr = selectedOptions.length > 0 ? selectedOptions.join(', ') : 'Aucune';
+            
+            let delayName = "Standard";
+            for (const input of projectDelayInputs) {
+                if (input.checked) {
+                    delayName = input.closest('.option-card').querySelector('.option-name').textContent.trim();
+                    break;
+                }
+            }
+            
+            const queryParams = new URLSearchParams({
+                type: typeName,
+                options: optionsStr,
+                delay: delayName,
+                budget: `${total.toLocaleString('fr-FR')} F CFA`
+            });
+            
+            launchProjectBtn.href = `contact.html?${queryParams.toString()}`;
+        }
+        
+        return total;
+    };
+    
+    const updateWizard = () => {
+        // Show/hide step contents
+        stepContents.forEach((content, index) => {
+            if (index + 1 === currentStep) {
+                content.classList.add('active');
+            } else {
+                content.classList.remove('active');
+            }
+        });
+        
+        // Update step indicators
+        stepIndicators.forEach((indicator, index) => {
+            const stepNum = index + 1;
+            indicator.classList.remove('active', 'completed');
+            if (stepNum === currentStep) {
+                indicator.classList.add('active');
+            } else if (stepNum < currentStep) {
+                indicator.classList.add('completed');
+            }
+        });
+        
+        // Update navigation button states
+        if (btnPrev && btnNext) {
+            btnPrev.disabled = (currentStep === 1);
+            
+            if (currentStep === totalSteps) {
+                btnNext.style.display = 'none';
+            } else {
+                btnNext.style.display = 'inline-block';
+                btnNext.textContent = (currentStep === totalSteps - 1) ? 'Obtenir l\'estimation' : 'Continuer';
+            }
+        }
+        
+        // Re-calculate budget on change
+        calculateBudget();
+    };
+    
+    if (btnNext) {
+        btnNext.addEventListener('click', () => {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateWizard();
+            }
+        });
+    }
+    
+    if (btnPrev) {
+        btnPrev.addEventListener('click', () => {
+            if (currentStep > 1) {
+                currentStep--;
+                updateWizard();
+            }
+        });
+    }
+    
+    // Bind change listeners to trigger automatic recalculation
+    const allInputs = [...projectTypeInputs, ...optionCheckboxes, ...projectDelayInputs];
+    allInputs.forEach(input => {
+        input.addEventListener('change', calculateBudget);
+    });
+    
+    // Initialize wizard
+    if (stepContents.length > 0) {
+        updateWizard();
+    }
+    
+    // ==========================================
+    // 6. PRE-FILL CONTACT FORM FROM BUDGET ESTIMATOR
+    // ==========================================
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = urlParams.get('type');
+    const optionsParam = urlParams.get('options');
+    const delayParam = urlParams.get('delay');
+    const budgetParam = urlParams.get('budget');
+    
+    if (typeParam && budgetParam) {
+        const formSubjectInput = document.getElementById('form-subject');
+        const formMessageInput = document.getElementById('form-message');
+        
+        if (formSubjectInput) {
+            formSubjectInput.value = `Demande de projet - ${typeParam}`;
+        }
+        
+        if (formMessageInput) {
+            formMessageInput.value = `Bonjour Moustapha,
+            
+Je souhaiterais collaborer avec vous sur un projet de type : ${typeParam}.
+
+Options selectionnees : ${optionsParam}
+Delai souhaite : ${delayParam}
+Budget estime via votre outil : ${budgetParam}
+
+[Decrivez ici votre projet et vos besoins en detail...]`;
+        }
+    }
 });

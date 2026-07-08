@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSTAPHA. | Services & Estimation de Budget</title>
+    <meta name="description"
+        content="Estimez le budget de votre projet de site vitrine, e-commerce, application web ou landing page grâce à notre configurateur interactif.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo-nav">MOUSTAPHA.</a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="skills.html" class="nav-link">Parcours</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu principal">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Services Header Section -->
+    <section class="page-title-section scroll-anim">
+        <div class="container">
+            <span class="page-tag">PRESTATIONS</span>
+            <h1 class="page-title">SERVICES & CONFIGURATEUR</h1>
+            <p class="page-subtitle">Des solutions web sur-mesure combinant haute performance, design d'impact et code robuste.</p>
+        </div>
+    </section>
+
+    <!-- Interactive Estimator Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <span class="section-tag">OUTIL GRATUIT</span>
+                <h2 class="section-title">ESTIMEZ VOTRE BUDGET WEB</h2>
+                <p class="about-paragraph" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    Configurez votre futur site ou application en 3 étapes simples pour obtenir instantanément une estimation de budget transparente.
+                </p>
+            </div>
+
+            <div class="estimator-container scroll-anim">
+                <!-- Step Indicators -->
+                <div class="estimator-steps">
+                    <div class="step-indicator active" data-step="1">
+                        <span class="step-num">1</span>
+                        <span class="step-label">Type</span>
+                    </div>
+                    <div class="step-indicator" data-step="2">
+                        <span class="step-num">2</span>
+                        <span class="step-label">Options</span>
+                    </div>
+                    <div class="step-indicator" data-step="3">
+                        <span class="step-num">3</span>
+                        <span class="step-label">Délai</span>
+                    </div>
+                    <div class="step-indicator" data-step="4">
+                        <span class="step-num">4</span>
+                        <span class="step-label">Résultat</span>
+                    </div>
+                </div>
+
+                <!-- Step Contents -->
+                <div class="estimator-form">
+                    
+                    <!-- Step 1: Type of Project -->
+                    <div class="step-content active" id="step-1-content">
+                        <h3 class="step-title">Quel type de projet souhaitez-vous lancer ?</h3>
+                        <div class="options-grid grid-2x2">
+                            <label class="option-card" for="type-vitrine">
+                                <input type="radio" name="project-type" id="type-vitrine" value="150000" checked>
+                                <div class="option-card-inner">
+                                    <span class="option-name">Site Vitrine</span>
+                                    <span class="option-price">dès 150 000 F CFA</span>
+                                </div>
+                            </label>
+                            <label class="option-card" for="type-ecommerce">
+                                <input type="radio" name="project-type" id="type-ecommerce" value="300000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">E-Commerce</span>
+                                    <span class="option-price">dès 300 000 F CFA</span>
+                                </div>
+                            </label>
+                            <label class="option-card" for="type-webapp">
+                                <input type="radio" name="project-type" id="type-webapp" value="500000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Application Web</span>
+                                    <span class="option-price">dès 500 000 F CFA</span>
+                                </div>
+                            </label>
+                            <label class="option-card" for="type-landing">
+                                <input type="radio" name="project-type" id="type-landing" value="100000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Landing Page</span>
+                                    <span class="option-price">dès 100 000 F CFA</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Options (Features) -->
+                    <div class="step-content" id="step-2-content">
+                        <h3 class="step-title">Sélectionnez les options complémentaires :</h3>
+                        <div class="options-grid grid-2x2">
+                            <label class="option-card check-card" for="opt-design">
+                                <input type="checkbox" id="opt-design" data-price="50000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Design UI/UX Sur-mesure</span>
+                                    <span class="option-price">+50 000 F CFA</span>
+                                </div>
+                            </label>
+                            <label class="option-card check-card" for="opt-seo">
+                                <input type="checkbox" id="opt-seo" data-price="30000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Optimisation SEO Pro</span>
+                                    <span class="option-price">+30 000 F CFA</span>
+                                </div>
+                            </label>
+                            <label class="option-card check-card" for="opt-dashboard">
+                                <input type="checkbox" id="opt-dashboard" data-price="80000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Dashboard d'Administration</span>
+                                    <span class="option-price">+80 000 F CFA</span>
+                                </div>
+                            </label>
+                            <label class="option-card check-card" for="opt-host">
+                                <input type="checkbox" id="opt-host" data-price="40000">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Hébergement & Domaine (1 an)</span>
+                                    <span class="option-price">+40 000 F CFA</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Deadline -->
+                    <div class="step-content" id="step-3-content">
+                        <h3 class="step-title">Quel est le délai de livraison souhaité ?</h3>
+                        <div class="options-grid grid-3col">
+                            <label class="option-card" for="delay-normal">
+                                <input type="radio" name="project-delay" id="delay-normal" value="1.0" checked>
+                                <div class="option-card-inner">
+                                    <span class="option-name">Standard</span>
+                                    <span class="option-price">4-6 semaines (Normal)</span>
+                                </div>
+                            </label>
+                            <label class="option-card" for="delay-urgent">
+                                <input type="radio" name="project-delay" id="delay-urgent" value="1.3">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Urgent</span>
+                                    <span class="option-price">Sous 2 semaines (+30%)</span>
+                                </div>
+                            </label>
+                            <label class="option-card" for="delay-express">
+                                <input type="radio" name="project-delay" id="delay-express" value="1.5">
+                                <div class="option-card-inner">
+                                    <span class="option-name">Express</span>
+                                    <span class="option-price">Sous 1 semaine (+50%)</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Result -->
+                    <div class="step-content" id="step-4-content">
+                        <div class="result-box">
+                            <h3 class="result-heading">Estimation de votre budget</h3>
+                            <div class="result-price-container">
+                                <span class="result-value" id="estimated-total">150 000</span>
+                                <span class="result-currency">F CFA</span>
+                            </div>
+                            <p class="result-disclaimer">Cette estimation instantanée est fournie à titre indicatif selon vos critères de configuration.</p>
+                            <div class="result-actions">
+                                <a href="contact.html" class="btn btn-primary" id="launch-project-btn">Lancer mon projet avec ce budget</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="estimator-nav">
+                    <button class="btn btn-secondary" id="btn-prev" disabled>Retour</button>
+                    <button class="btn btn-primary" id="btn-next">Continuer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Details (Enrichment) -->
+    <section class="services-details-section">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <span class="section-tag">ENGAGEMENT</span>
+                <h2 class="section-title">CE QUI EST COMPRIS DANS CHAQUE PROJET</h2>
+            </div>
+            
+            <div class="services-details-grid scroll-anim">
+                <div class="service-detail-card">
+                    <h4>Design Réactif & Fluide</h4>
+                    <p>Chaque site est optimisé pour tous les écrans (mobiles, tablettes et ordinateurs de bureau), assurant une expérience de navigation irréprochable et des performances maximales.</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4>Code Sémantique & Standardisé</h4>
+                    <p>Écriture rigoureuse selon les meilleures pratiques du développement (Clean Code, structures de données optimales, aucun script inutile) pour garantir l'évolutivité de votre plateforme.</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4>Vitesse & Performance</h4>
+                    <p>Optimisation du chargement des pages, compression des images, requêtes asynchrones et mise en cache pour des temps de réponse sous la seconde.</p>
+                </div>
+                <div class="service-detail-card">
+                    <h4>Suivi & Maintenance</h4>
+                    <p>Une période d'assistance technique de 3 mois après la mise en ligne est incluse sans surcoût pour assurer le bon fonctionnement de votre nouvel outil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist FAQ Section (Enrichment) -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <span class="section-tag">RÉPONSES</span>
+                <h2 class="section-title">FOIRE AUX QUESTIONS</h2>
+            </div>
+
+            <div class="faq-accordion scroll-anim">
+                <div class="faq-item">
+                    <button class="faq-question">Comment se déroule la création de mon projet ?</button>
+                    <div class="faq-answer">
+                        <p>La création de votre site se fait en 4 phases simples :</p>
+                        <ol style="margin-left: 20px; margin-top: 10px; line-height: 1.6;">
+                            <li>Analyse de vos objectifs et cadrage technique.</li>
+                            <li>Création et validation des maquettes graphiques (design UI/UX).</li>
+                            <li>Développement et tests rigoureux du code.</li>
+                            <li>Déploiement en ligne et formation à sa prise en main.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Puis-je modifier le contenu de mon site de façon autonome ?</button>
+                    <div class="faq-answer">
+                        <p>Oui. Pour les sites vitrines et e-commerce, un dashboard administratif sécurisé et simple d'utilisation peut être développé sur-mesure (voir option Étape 2) afin que vous puissiez éditer vos textes, articles ou photos en toute autonomie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Le nom de domaine et l'hébergement sont-ils compris ?</button>
+                    <div class="faq-answer">
+                        <p>Ces éléments sont à votre charge, mais je propose une option d'accompagnement complet d'un an pour configurer l'hébergement serveur, réserver votre nom de domaine (.com, .net, .sn, etc.) et sécuriser votre site avec un certificat SSL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <span class="footer-logo">MOUSTAPHA.</span>
+            <p class="footer-copyright">&copy; 2026 Mouhamadou Moustapha Gueye. Tous droits réservés.</p>
+            <div class="footer-bottom-links">
+                <a href="#logo-nav">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+    <script>
+        // Minimalist Accordion Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.closest('.faq-item');
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -32,8 +32,9 @@ Le site est découpé en plusieurs pages dédiées :
 1.  **Home (`index.html`)** : Section d'accueil comprenant un bandeau de statistiques clés, une présentation de ma philosophie de conception (Performance, Architecture Clean, Minimalisme) et la mise en valeur de mon projet phare (**EventPass**) avec un visuel de ticket d'accès VIP interactif en SVG.
 2.  **À Propos (`about.html`)** : Présentation de mon profil de développeur, de mon cursus académique, de ma passion pour les jeux vidéo et de l'origine de mon alias de joueur `</Baay_Hacker>` (alliant les valeurs de travail et d'humilité du mouvement *Baay Faal* au Sénégal à ma passion pour la technique informatique).
 3.  **Projets (`projects.html`)** : Galerie de mes réalisations techniques avec filtres interactifs et badges de catégorie.
-4.  **Parcours (`skills.html`)** : Frise chronologique 3D de mes certifications et compétences classées (Langages, Frameworks, Bases de données, Outils).
-5.  **Contact (`contact.html`)** : Formulaire de contact moderne et liens directs vers mes canaux professionnels (Email, LinkedIn, WhatsApp).
+4.  **Services (`services.html`)** : Outil d'estimation de budget web interactif en 3 étapes (choix du projet, options, délai) avec redirection préremplie vers le formulaire de contact, enrichi d'un récapitulatif des prestations et d'une FAQ accordéon.
+5.  **Parcours (`skills.html`)** : Frise chronologique 3D de mes certifications et compétences classées (Langages, Frameworks, Bases de données, Outils).
+6.  **Contact (`contact.html`)** : Formulaire de contact moderne et liens directs vers mes canaux professionnels (Email, LinkedIn, WhatsApp).
 
 ---
 
