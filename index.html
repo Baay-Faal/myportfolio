@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSTAPHA. | Développeur Fullstack & Mobile (Home)</title>
+    <meta name="description"
+        content="Page d'accueil du portfolio de Mouhamadou Moustapha Gueye. Ingénierie logicielle de précision.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo-nav">MOUSTAPHA.</a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="skills.html" class="nav-link">Parcours</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu principal">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-accent"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-tagline scroll-anim">MOUHAMADOU MOUSTAPHA GUEYE</p>
+                <h1 class="hero-title scroll-anim">
+                    JUST CODE IT.
+                </h1>
+                <h2 class="hero-subtitle scroll-anim">
+                    DEVELOPER FULLSTACK & MOBILE
+                </h2>
+                <p class="hero-description scroll-anim">
+                    Ingénierie logicielle de précision. Conception d'applications mobiles performantes et de plateformes
+                    web scalables basées sur la robustesse et l'innovation constante.
+                </p>
+                <div class="hero-actions scroll-anim">
+                    <a href="projects.html" class="btn btn-primary" id="hero-btn-projects">Découvrir les Projets</a>
+                    <a href="contact.html" class="btn btn-secondary" id="hero-btn-contact">Me Contacter</a>
+                </div>
+            </div>
+            <div class="hero-visual scroll-anim">
+                <!-- Abstract visual representation -->
+                <svg class="hero-svg-graphic" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradient-azur-3d" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00C6FF" />
+                            <stop offset="60%" stop-color="#0072FF" />
+                            <stop offset="100%" stop-color="#0052D4" />
+                        </linearGradient>
+                        <linearGradient id="gradient-dark-3d" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#4B5563" />
+                            <stop offset="50%" stop-color="#1F2937" />
+                            <stop offset="100%" stop-color="#111827" />
+                        </linearGradient>
+                        <linearGradient id="gradient-steel-3d" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FFFFFF" />
+                            <stop offset="50%" stop-color="#D1D5DB" />
+                            <stop offset="100%" stop-color="#9CA3AF" />
+                        </linearGradient>
+                        <filter id="shadow-3d" x="-20%" y="-20%" width="150%" height="150%">
+                            <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+                        </filter>
+                    </defs>
+                    <circle cx="250" cy="250" r="180" stroke="url(#gradient-azur-3d)" stroke-width="4"
+                        filter="url(#shadow-3d)" stroke-dasharray="10 15" />
+                    <rect x="150" y="150" width="200" height="200" rx="30" fill="url(#gradient-dark-3d)"
+                        filter="url(#shadow-3d)" transform="rotate(15 250 250)" />
+                    <path d="M220 200L300 250L220 300Z" fill="url(#gradient-azur-3d)" filter="url(#shadow-3d)" />
+                    <circle cx="150" cy="150" r="12" fill="url(#gradient-azur-3d)" filter="url(#shadow-3d)" />
+                    <circle cx="350" cy="350" r="20" fill="url(#gradient-steel-3d)" filter="url(#shadow-3d)" />
+                </svg>
+            </div>
+        </div>
+        <div class="scroll-down-indicator">
+            <a href="about.html" aria-label="Défiler vers le bas">
+                <svg class="scroll-arrow" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="#111111" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Highlights Band -->
+    <div class="home-highlights-band scroll-anim">
+        <div class="container highlights-container">
+            <div class="highlight-item">
+                <span class="highlight-val">10+</span>
+                <span class="highlight-txt">Projets<br>Majeurs</span>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-val">Dakar</span>
+                <span class="highlight-txt">Localisation<br>Sénégal</span>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-val">10+</span>
+                <span class="highlight-txt">Compétences<br>Ingénierie</span>
+            </div>
+            <div class="highlight-item">
+                <span class="highlight-val">03+</span>
+                <span class="highlight-txt">Certifications<br>& Diplômes</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Piliers / Philosophie Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="section-header scroll-anim">
+                <span class="section-tag">INNOVATION</span>
+                <h2 class="section-title">PHILOSOPHIE DE CONCEPTION</h2>
+            </div>
+
+            <div class="philosophy-grid">
+                <!-- Card 1: Performance -->
+                <div class="philosophy-card scroll-anim" id="phi-performance">
+                    <div class="phi-icon">
+                        <!-- Speed Gauge SVG -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0072FF" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                        </svg>
+                    </div>
+                    <h3>Performance Absolue</h3>
+                    <p>Optimisation systématique des temps de chargement, fluidité d'affichage 60 FPS et consommation de
+                        ressources minimale pour un rendu utilisateur instantané.</p>
+                </div>
+
+                <!-- Card 2: Clean Code -->
+                <div class="philosophy-card scroll-anim" id="phi-architecture">
+                    <div class="phi-icon">
+                        <!-- Layers / Code Structure SVG -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0072FF" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                            <polyline points="2 17 12 22 22 17" />
+                            <polyline points="2 12 12 17 22 12" />
+                        </svg>
+                    </div>
+                    <h3>Architecture Clean</h3>
+                    <p>Conception modulaire appliquant les principes SOLID et Clean Code. Des structures lisibles,
+                        extensibles et hautement testables au service de la durabilité.</p>
+                </div>
+
+                <!-- Card 3: Minimalist Design -->
+                <div class="philosophy-card scroll-anim" id="phi-minimalism">
+                    <div class="phi-icon">
+                        <!-- Compass / Geometry SVG -->
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0072FF" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v8M8 12h8" />
+                        </svg>
+                    </div>
+                    <h3>Design Minimaliste</h3>
+                    <p>S'inspirer de la rigueur de Nike : éliminer tout élément visuel ou fonctionnel superflu pour se
+                        concentrer uniquement sur le contenu, l'action et l'impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projet Phare (Nike Billboard Style) -->
+    <section class="featured-project-section">
+        <div class="bg-watermark-text">EVENTPASS</div>
+
+        <div class="container">
+            <div class="featured-grid">
+
+                <!-- Left: Info -->
+                <div class="featured-info scroll-anim">
+                    <div class="section-header">
+                        <span class="section-tag">PROJET PHARE</span>
+                        <h2 class="section-title">EVENTPASS : LA BILLETTERIE DE HAUTE PRÉCISION</h2>
+                    </div>
+                    <p class="about-paragraph" style="margin-bottom: 24px;">
+                        EventPass révolutionne l'accès aux événements en temps réel. Cette plateforme de billetterie
+                        associe une application mobile Flutter robuste à une API Express performante, garantissant des
+                        temps de validation de code-barres et QR-codes inférieurs à 100ms.
+                    </p>
+                    <p class="about-paragraph" style="margin-bottom: 36px;">
+                        Une architecture pensée pour le trafic intense, avec des mécanismes de cache optimisés, des
+                        files d'attente résilientes et une synchronisation hors-ligne transparente.
+                    </p>
+
+                    <a href="https://github.com/Baay-Faal/eventpass.git" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary" id="featured-btn-github">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="#FFFFFF" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.93 0-1.311.469-2.381 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>Explorer le code source</span>
+                    </a>
+                </div>
+
+                <!-- Right: Visual Ticket Mockup (Nike Ad Visual Style) -->
+                <div class="featured-visual scroll-anim">
+                    <div class="featured-card-3d">
+                        <!-- 3D Ticket SVG Graphic -->
+                        <svg viewBox="0 0 300 400" width="100%" height="auto"
+                            style="filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));">
+                            <defs>
+                                <linearGradient id="ticket-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#111111" />
+                                    <stop offset="100%" stop-color="#1E293B" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Card background -->
+                            <rect width="300" height="400" rx="20" fill="url(#ticket-grad)" />
+                            <!-- Glowing Top Border Accent -->
+                            <path d="M 20 0 L 280 0 A 20 20 0 0 1 300 20 L 300 120 L 0 120 L 0 20 A 20 20 0 0 1 20 0 Z"
+                                fill="#1E293B" opacity="0.4" />
+
+                            <!-- Header Info -->
+                            <text x="30" y="50" font-family="'Inter', sans-serif" font-weight="900" font-size="12"
+                                fill="#0072FF" letter-spacing="2">EVENTPASS</text>
+                            <text x="30" y="80" font-family="'Inter', sans-serif" font-weight="900" font-size="20"
+                                fill="#FFFFFF">PASS ACCÈS VIP</text>
+                            <text x="30" y="102" font-family="'Inter', sans-serif" font-weight="500" font-size="11"
+                                fill="#757575">VALIDATION EN TEMPS RÉEL</text>
+
+                            <!-- Middle cutouts (Ticket style) -->
+                            <circle cx="0" cy="180" r="15" fill="#F5F5F5" />
+                            <circle cx="300" cy="180" r="15" fill="#F5F5F5" />
+                            <line x1="20" y1="180" x2="280" y2="180" stroke="#757575" stroke-dasharray="8 6"
+                                stroke-width="1" opacity="0.3" />
+
+                            <!-- Main Visual Code Representation (Abstract QR-code overlay) -->
+                            <rect x="90" y="210" width="120" height="120" rx="10" fill="#FFFFFF" />
+                            <!-- QR code lines -->
+                            <rect x="105" y="225" width="30" height="30" fill="#111111" />
+                            <rect x="165" y="225" width="30" height="30" fill="#111111" />
+                            <rect x="105" y="285" width="30" height="30" fill="#111111" />
+                            <!-- Little code details -->
+                            <rect x="145" y="245" width="10" height="10" fill="#0072FF" />
+                            <rect x="145" y="275" width="15" height="10" fill="#111111" />
+                            <rect x="175" y="275" width="10" height="20" fill="#111111" />
+
+                            <!-- Slogan -->
+                            <text x="150" y="370" font-family="'Inter', sans-serif" font-weight="800" font-size="10"
+                                fill="#0072FF" letter-spacing="4" text-anchor="middle">JUST ACCESSED.</text>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <span class="footer-logo">MOUSTAPHA.</span>
+            <p class="footer-copyright">&copy; 2026 Mouhamadou Moustapha Gueye. Tous droits réservés.</p>
+            <div class="footer-bottom-links">
+                <a href="#home">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

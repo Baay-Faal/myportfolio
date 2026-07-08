@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSTAPHA. | Projets</title>
+    <meta name="description"
+        content="Découvrez le catalogue des réalisations logicielles, applications mobiles et plateformes web conçues par Mouhamadou Moustapha Gueye.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo-nav">MOUSTAPHA.</a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="skills.html" class="nav-link">Parcours</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu principal">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Projets Section (Nike Catalog Grid Style) -->
+    <section id="projects" class="projects-section"
+        style="min-height: calc(100vh - var(--header-height)); display: flex; align-items: center; padding: 100px 0;">
+        <div class="container" style="width: 100%;">
+            <div class="section-header scroll-anim">
+                <span class="section-tag">COLLECTION</span>
+                <h2 class="section-title">PROJETS SÉLECTIONNÉS</h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: EventPass -->
+                <div class="project-card scroll-anim" id="project-card-eventpass">
+                    <div class="project-card-header">
+                        <div class="project-badge">EVENT PLATFORM</div>
+                        <div class="project-card-icon">
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="#111111"
+                                    stroke-width="2" />
+                                <path d="M16 2V6M8 2V6M3 10H21" stroke="#0072FF" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <circle cx="8" cy="15" r="1.5" fill="#0072FF" />
+                                <circle cx="16" cy="15" r="1.5" fill="#0072FF" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">EventPass</h3>
+                        <p class="project-desc">Plateforme performante de gestion de billetterie et d'accès aux
+                            événements en temps réel.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Mobile</span>
+                            <span class="tech-tag">Web</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Flutter</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/Baay-Faal/eventpass.git" target="_blank" rel="noopener noreferrer"
+                            class="project-link" id="link-eventpass">
+                            <!-- Official GitHub CDN Icon -->
+                            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"
+                                style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 4px;">
+                            <span>Explore sur GitHub</span>
+                            <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: FleetHub -->
+                <div class="project-card scroll-anim" id="project-card-fleethub">
+                    <div class="project-card-header">
+                        <div class="project-badge">LOGISTICS & FLEET</div>
+                        <div class="project-card-icon">
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#111111"
+                                    stroke-width="2" />
+                                <path d="M5 17h14M9 12h6" stroke="#0072FF" stroke-width="2" stroke-linecap="round" />
+                                <circle cx="7" cy="17" r="1.5" fill="#0072FF" />
+                                <circle cx="17" cy="17" r="1.5" fill="#0072FF" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">FleetHub</h3>
+                        <p class="project-desc">Application d'optimisation et de suivi temps réel pour la gestion de
+                            flottes de véhicules d'entreprise.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">Database</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">API Rest</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/Baay-Faal/fleethub.git" target="_blank" rel="noopener noreferrer"
+                            class="project-link" id="link-fleethub">
+                            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"
+                                style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 4px;">
+                            <span>Explore sur GitHub</span>
+                            <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Portfolio -->
+                <div class="project-card scroll-anim" id="project-card-portfolio">
+                    <div class="project-card-header">
+                        <div class="project-badge">BRAND IDENTITY</div>
+                        <div class="project-card-icon">
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#111111"
+                                    stroke-width="2" />
+                                <path d="M7 8l5 5 5-5" stroke="#0072FF" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">Portfolio</h3>
+                        <p class="project-desc">Le code source de cette vitrine interactive, conçue avec précision et
+                            optimisée pour l'impact visuel.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Vanilla JS</span>
+                            <span class="tech-tag">CSS3 Premium</span>
+                            <span class="tech-tag">SEO Optimized</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/Baay-Faal/portfolio.git" target="_blank" rel="noopener noreferrer"
+                            class="project-link" id="link-portfolio">
+                            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"
+                                style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 4px;">
+                            <span>Explore sur GitHub</span>
+                            <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: KaayDeuk -->
+                <div class="project-card scroll-anim" id="project-card-kaaydeuk">
+                    <div class="project-card-header">
+                        <div class="project-badge">REAL ESTATE</div>
+                        <div class="project-card-icon">
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#111111"
+                                    stroke-width="2" />
+                                <path d="M12 7l6 5v6H6v-6l6-5z" stroke="#0072FF" stroke-width="2"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">KaayDeuk</h3>
+                        <p class="project-desc">Plateforme de recherche, d'hébergement et de location immobilière
+                            ciblant le marché sénégalais.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Maps API</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/Baay-Faal/KaayDeuk.git" target="_blank" rel="noopener noreferrer"
+                            class="project-link" id="link-kaaydeuk">
+                            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"
+                                style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 4px;">
+                            <span>Explore sur GitHub</span>
+                            <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Sett Wecc -->
+                <div class="project-card scroll-anim" id="project-card-settwecc">
+                    <div class="project-card-header">
+                        <div class="project-badge">LAUNDRY & PRESSING</div>
+                        <div class="project-card-icon">
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#111111"
+                                    stroke-width="2" />
+                                <path d="M12 7l4 3v5H8v-5l4-3zM9 10V8a3 3 0 016 0v2" stroke="#0072FF" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">Sett Wecc</h3>
+                        <p class="project-desc">Plateforme mobile de digitalisation et d'optimisation des services de blanchisserie (pressing) avec suivi des commandes.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Suivi Commandes</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/Baay-Faal/sett_wecc.git" target="_blank" rel="noopener noreferrer"
+                            class="project-link" id="link-settwecc">
+                            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"
+                                style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 4px;">
+                            <span>Explore sur GitHub</span>
+                            <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: BankEasy (Système Bancaire) -->
+                <div class="project-card scroll-anim" id="project-card-bankeasy">
+                    <div class="project-card-header">
+                        <div class="project-badge">BANKING SYSTEM</div>
+                        <div class="project-card-icon">
+                            <!-- Bank building SVG icon -->
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#111111" stroke-width="2" />
+                                <path d="M3 10h18M12 6v4M8 6v4M16 6v4M6 14h12v4H6v-4z" stroke="#0072FF" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">BankEasy</h3>
+                        <p class="project-desc">Application de gestion de comptes bancaires (courants et épargne), transactions sécurisées, virements et historique de solde.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">OOP</span>
+                            <span class="tech-tag">SQL Server</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <div class="project-link" style="color: var(--color-gray-medium); cursor: not-allowed; opacity: 0.8; pointer-events: none;">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+                                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                            <span>Code Source Privé</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: NetMapper -->
+                <div class="project-card scroll-anim" id="project-card-netmapper">
+                    <div class="project-card-header">
+                        <div class="project-badge">NETWORK UTILITY</div>
+                        <div class="project-card-icon">
+                            <!-- Topology network SVG icon -->
+                            <svg class="proj-svg" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="#111111" stroke-width="2" />
+                                <circle cx="8" cy="8" r="2.5" fill="#0072FF" />
+                                <circle cx="16" cy="8" r="2.5" fill="#0072FF" />
+                                <circle cx="12" cy="16" r="2.5" fill="#0072FF" />
+                                <line x1="8" y1="8" x2="12" y2="16" stroke="#0072FF" stroke-width="2" stroke-linecap="round" />
+                                <line x1="16" y1="8" x2="12" y2="16" stroke="#0072FF" stroke-width="2" stroke-linecap="round" />
+                                <line x1="8" y1="8" x2="16" y2="8" stroke="#0072FF" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">NetMapper</h3>
+                        <p class="project-desc">Projet de groupe : outil de modélisation et de cartographie réseau conçu pour créer des topologies réseau de manière plus simple et intuitive que sur Packet Tracer.</p>
+                        <div class="project-tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Projet de Groupe</span>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="https://github.com/pln4real/netmapper.git" target="_blank" rel="noopener noreferrer" class="project-link" id="link-netmapper">
+                            <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 4px;">
+                            <span>Explore sur GitHub</span>
+                            <svg class="link-arrow" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <span class="footer-logo">MOUSTAPHA.</span>
+            <p class="footer-copyright">&copy; 2026 Mouhamadou Moustapha Gueye. Tous droits réservés. </p>
+            <div class="footer-bottom-links">
+                <a href="#projects">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

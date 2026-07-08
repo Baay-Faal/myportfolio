@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOUSTAPHA. | Parcours & Compétences</title>
+    <meta name="description"
+        content="Découvrez le parcours universitaire et certifiant de Mouhamadou Moustapha Gueye ainsi que les compétences techniques maîtrisées.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" id="logo-nav">MOUSTAPHA.</a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">À Propos</a>
+                <a href="projects.html" class="nav-link">Projets</a>
+                <a href="skills.html" class="nav-link">Parcours</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu principal">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Parcours & Compétences Section -->
+    <section id="skills" class="skills-section"
+        style="min-height: calc(100vh - var(--header-height)); display: flex; align-items: center; padding: 100px 0;">
+        <div class="container">
+            <div class="skills-grid-layout">
+
+                <!-- Part 1: Parcours Académique (Timeline) -->
+                <div class="education-block scroll-anim">
+                    <div class="section-header">
+                        <span class="section-tag">TRAINING</span>
+                        <h2 class="section-title">PARCOURS</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item" id="edu-isi">
+                            <div class="timeline-dot-3d"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">LICENCE</span>
+                                <h3 class="timeline-title">Génie Logiciel</h3>
+                                <p class="timeline-institution">ISI SUPTECH</p>
+                                <p class="timeline-desc">Spécialisation dans les méthodologies logicielles, la
+                                    conception de bases de données relationnelles et non relationnelles, et le
+                                    développement d'architectures d'applications complexes.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" id="edu-gomycode">
+                            <div class="timeline-dot-3d"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">CERTIFICATION</span>
+                                <h3 class="timeline-title">Développeur Fullstack</h3>
+                                <p class="timeline-institution">GOMYCODE</p>
+                                <p class="timeline-desc">Immersion et validation intensive des compétences Fullstack :
+                                    de l'architecture backend RESTful aux interfaces utilisateurs réactives haut de
+                                    gamme.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part 2: Compétences (3D Grid with Imported CDN Logos) -->
+                <div class="skills-block scroll-anim">
+                    <div class="section-header">
+                        <span class="section-tag">ENGINEERING</span>
+                        <h2 class="section-title">COMPÉTENCES</h2>
+                    </div>
+
+                    <!-- Languages Category -->
+                    <h3 class="skills-category-title">Langages de Programmation</h3>
+                    <div class="skills-grid">
+
+                        <!-- PHP -->
+                        <div class="skill-item-3d" id="skill-php">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/php" alt="PHP">
+                            </div>
+                            <span class="skill-name">PHP</span>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="skill-item-3d" id="skill-python">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/python" alt="Python">
+                            </div>
+                            <span class="skill-name">Python</span>
+                        </div>
+
+                        <!-- Dart -->
+                        <div class="skill-item-3d" id="skill-dart">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/dart" alt="Dart">
+                            </div>
+                            <span class="skill-name">Dart</span>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="skill-item-3d" id="skill-javascript">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/javascript" alt="JavaScript">
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+
+                        <!-- Java (Official Logo) -->
+                        <div class="skill-item-3d" id="skill-java">
+                            <div class="skill-icon">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java">
+                            </div>
+                            <span class="skill-name">Java</span>
+                        </div>
+
+                        <!-- C# (Official Logo) -->
+                        <div class="skill-item-3d" id="skill-csharp">
+                            <div class="skill-icon">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#">
+                            </div>
+                            <span class="skill-name">C#</span>
+                        </div>
+                    </div>
+
+                    <!-- Frameworks / Technologies -->
+                    <h3 class="skills-category-title">Technologies & Frameworks</h3>
+                    <div class="skills-grid">
+
+                        <!-- Express.js -->
+                        <div class="skill-item-3d" id="skill-express">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/express/000000" alt="Express.js">
+                            </div>
+                            <span class="skill-name">Express.js</span>
+                        </div>
+
+                        <!-- Laravel -->
+                        <div class="skill-item-3d" id="skill-laravel">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/laravel" alt="Laravel">
+                            </div>
+                            <span class="skill-name">Laravel</span>
+                        </div>
+
+                        <!-- Django -->
+                        <div class="skill-item-3d" id="skill-django">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/django" alt="Django">
+                            </div>
+                            <span class="skill-name">Django</span>
+                        </div>
+
+                        <!-- Flask -->
+                        <div class="skill-item-3d" id="skill-flask">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/flask/000000" alt="Flask">
+                            </div>
+                            <span class="skill-name">Flask</span>
+                        </div>
+
+                        <!-- Flutter -->
+                        <div class="skill-item-3d" id="skill-flutter">
+                            <div class="skill-icon">
+                                <img src="https://cdn.simpleicons.org/flutter" alt="Flutter">
+                            </div>
+                            <span class="skill-name">Flutter</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <span class="footer-logo">MOUSTAPHA.</span>
+            <p class="footer-copyright">&copy; 2026 Mouhamadou Moustapha Gueye. Tous droits réservés.</p>
+            <div class="footer-bottom-links">
+                <a href="#skills">Back to top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
