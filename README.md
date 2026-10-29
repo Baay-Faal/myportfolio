@@ -29,7 +29,7 @@ Le portfolio est développé en technologies web natives pour garantir des perfo
 ## 📂 Structure Multi-Pages
 
 Le site est découpé en plusieurs pages dédiées :
-1.  **Home (`index.html`)** : Section d'accueil comprenant un bandeau de statistiques clés, une présentation de ma philosophie de conception (Performance, Architecture Clean, Minimalisme) et la mise en valeur de mon projet phare (**EventPass**) avec un visuel de ticket d'accès VIP interactif en SVG.
+1.  **Home (`index.html`)** : Section d'accueil comprenant un bandeau de statistiques clés, une présentation de ma philosophie de conception (Performance, Architecture Clean, Minimalisme) et la mise en valeur de mon projet phare (**KOCC**) avec son identité visuelle officielle, ses spécifications d'ingénierie et la gestion sécurisée de son dépôt privé.
 2.  **À Propos (`about.html`)** : Présentation de mon profil de développeur, de mon cursus académique, de ma passion pour les jeux vidéo et de l'origine de mon alias de joueur `</Baay_Hacker>` (alliant les valeurs de travail et d'humilité du mouvement *Baay Faal* au Sénégal à ma passion pour la technique informatique).
 3.  **Projets (`projects.html`)** : Galerie de mes réalisations techniques avec filtres interactifs et badges de catégorie.
 4.  **Services (`services.html`)** : Outil d'estimation de budget web interactif en 3 étapes (choix du projet, options, délai) avec redirection préremplie vers le formulaire de contact, enrichi d'un récapitulatif des prestations et d'une FAQ accordéon.
@@ -40,11 +40,12 @@ Le site est découpé en plusieurs pages dédiées :
 
 ## 🚀 Projets Majeurs Présentés
 
-*   **KaayDeuk** : Plateforme mobile de covoiturage interurbain au Sénégal facilitant la mise en relation des conducteurs et des passagers.
-*   **EventPass** : Solution de billetterie événementielle de haute précision avec validation des QR-codes en temps réel (< 100ms).
-*   **Sett Wecc** : Plateforme mobile de digitalisation et d'optimisation des services de blanchisserie (pressing) avec suivi des commandes en temps réel.
-*   **NetMapper** : Projet collaboratif de cartographie réseau offrant une modélisation simplifiée et intuitive de topologies réseau (alternative légère à Cisco Packet Tracer).
-*   **BankEasy** : Application C# / .NET de gestion de comptes bancaires avec calculs d'intérêts et transactions sécurisées (code source privé).
+*   **KOCC (Projet Phare)** : Plateforme académique intégrée et système intelligent de gestion pédagogique LMD (ISI SUPTECH). Intègre l'assistant d'IA **MBENE** (Google Gemini Flash) pour le tutorat personnalisé et la détection prédictive du décrochage scolaire, une architecture fullstack 3-tiers (React 18, Node.js / Express, MySQL 8.0) et un contrôle d'accès strict (RBAC 5 rôles) *(dépôt GitHub privé)*.
+*   **EventPass** : Solution de billetterie événementielle de haute précision avec validation des QR-codes en temps réel (< 100ms) *(Flutter, Express.js)*.
+*   **KaayDeuk** : Plateforme mobile de covoiturage interurbain au Sénégal facilitant la mise en relation des conducteurs et des passagers *(Flutter, Django)*.
+*   **Sett Wecc** : Plateforme mobile de digitalisation et d'optimisation des services de blanchisserie (pressing) avec suivi des commandes en temps réel *(Flutter, Flask)*.
+*   **NetMapper** : Projet collaboratif de cartographie réseau offrant une modélisation simplifiée et intuitive de topologies réseau (alternative légère à Cisco Packet Tracer) *(PHP)*.
+*   **BankEasy** : Application C# / .NET de gestion de comptes bancaires avec calculs d'intérêts et transactions sécurisées *(code source privé)*.
 
 ---
 

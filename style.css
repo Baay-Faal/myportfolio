@@ -1317,6 +1317,191 @@ img, svg {
     box-shadow: var(--shadow-3d-lg);
 }
 
+/* KOCC Featured Card Modern Showcase */
+.featured-kocc-card {
+    background: linear-gradient(135deg, #0e1726 0%, #030712 100%);
+    border-radius: 24px;
+    padding: 36px 32px;
+    box-shadow: 0 25px 50px -12px rgba(0, 114, 255, 0.25), 0 0 0 1px rgba(0, 198, 255, 0.2);
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.featured-kocc-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 114, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.featured-kocc-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px -10px rgba(0, 114, 255, 0.35), 0 0 0 1px rgba(0, 198, 255, 0.4);
+}
+
+.kocc-card-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.kocc-card-tag {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #00C6FF;
+    background: rgba(0, 198, 255, 0.12);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 198, 255, 0.25);
+}
+
+.kocc-card-status {
+    font-size: 10px;
+    font-weight: 700;
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.kocc-card-status-dot {
+    width: 7px;
+    height: 7px;
+    background: #10B981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10B981;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.kocc-logo-container {
+    text-align: center;
+    padding: 16px 10px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.kocc-app-logo {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 198, 255, 0.35));
+    transition: transform 0.4s ease;
+}
+
+.featured-kocc-card:hover .kocc-app-logo {
+    transform: scale(1.05);
+}
+
+.kocc-card-slogan {
+    font-size: 12px;
+    font-style: italic;
+    color: #94A3B8;
+    text-align: center;
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 2;
+}
+
+.kocc-features-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 26px;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.kocc-chip {
+    font-size: 11px;
+    font-weight: 700;
+    color: #F8FAFC;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 5px 10px;
+    border-radius: 6px;
+    backdrop-filter: blur(8px);
+}
+
+.kocc-chip.highlight {
+    background: rgba(0, 114, 255, 0.25);
+    border-color: rgba(0, 198, 255, 0.4);
+    color: #38BDF8;
+}
+
+.kocc-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.kocc-metric-item {
+    text-align: center;
+}
+
+.kocc-metric-val {
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.kocc-metric-lbl {
+    font-size: 10px;
+    font-weight: 600;
+    color: #64748B;
+    text-transform: uppercase;
+}
+
+/* Private Repo Notice Badge */
+.private-repo-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #FEF3C7;
+    border: 1px solid #FCD34D;
+    color: #92400E;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.featured-actions-kocc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
 /* Responsive updates for new sections */
 @media (max-width: 1024px) {
     .philosophy-grid {

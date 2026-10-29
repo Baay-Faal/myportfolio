@@ -334,18 +334,19 @@ Message : ${message}`;
     }
     
     // ==========================================
-    // 6. PRE-FILL CONTACT FORM FROM BUDGET ESTIMATOR
+    // 6. PRE-FILL CONTACT FORM (BUDGET ESTIMATOR OR DIRECT SUBJECT)
     // ==========================================
     const urlParams = new URLSearchParams(window.location.search);
     const typeParam = urlParams.get('type');
     const optionsParam = urlParams.get('options');
     const delayParam = urlParams.get('delay');
     const budgetParam = urlParams.get('budget');
+    const subjectParam = urlParams.get('subject');
     
+    const formSubjectInput = document.getElementById('form-subject');
+    const formMessageInput = document.getElementById('form-message');
+
     if (typeParam && budgetParam) {
-        const formSubjectInput = document.getElementById('form-subject');
-        const formMessageInput = document.getElementById('form-message');
-        
         if (formSubjectInput) {
             formSubjectInput.value = `Demande de projet - ${typeParam}`;
         }
@@ -360,6 +361,19 @@ Delai souhaite : ${delayParam}
 Budget estime via votre outil : ${budgetParam}
 
 [Decrivez ici votre projet et vos besoins en detail...]`;
+        }
+    } else if (subjectParam) {
+        if (formSubjectInput) {
+            formSubjectInput.value = subjectParam;
+        }
+        if (formMessageInput) {
+            formMessageInput.value = `Bonjour Moustapha,
+
+Je vous contacte suite à la découverte de votre projet "${subjectParam.replace("Demande d'accès - Projet ", "")}" sur votre portfolio.
+
+J'aimerais échanger avec vous et solliciter un accès de consultation au dépôt privé ou organiser une démonstration technique.
+
+Cordialement,`;
         }
     }
 });
