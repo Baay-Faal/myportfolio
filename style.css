@@ -137,6 +137,28 @@ img, svg {
     transform: translateY(-2px);
 }
 
+.btn-cv {
+    background: linear-gradient(135deg, #0072FF 0%, #0052D4 100%);
+    color: var(--color-white);
+    border: none;
+    box-shadow: 0 4px 14px rgba(0, 114, 255, 0.3);
+}
+
+.btn-cv:hover {
+    background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 114, 255, 0.45);
+}
+
+.btn-cv svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-cv:hover svg {
+    transform: translateY(2px);
+}
+
 .btn-full-width {
     width: 100%;
 }
